@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Welcome to {{ title }}</title>
+    <link rel="stylesheet" type="text/css" href="static/style.css">
+</head>
+<body>
+<h1>{{ num + 1}} - {{ principle }}</h1>
+<h3> {{ description }}</h3>
+</hr>
+<p>{% if num > 0 %}
+    <a href="/{{ num - 1 }}">Previous</a> |
+    {% else %}
+    Previous |
+    {% endif %}
+    <a href="/random">Random</a>
+    {% if num < 13 %}
+    | <a href="{{ num + 1 }}">Next</a>
+    {% else %}
+    | Next
+    {% endif %}
+</p>
+
+<p>Here you can access the <a href="/principles">{{ title }}</a></p>
+
+</body>
+</html>

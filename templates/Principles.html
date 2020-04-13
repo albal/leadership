@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Welcome to {{ title }}</title>
+    <link rel="stylesheet" type="text/css" href="static/style.css">
+</head>
+<body>
+<p>Here is a list of all the {{ title }}</p>
+<div class="principles">
+    {% for principle in principles %}
+    <div><a href="/{{ loop.index - 1 }}">{{ principle }}</a></div>
+    {% endfor %}
+</div>
+
+<p>Access a random {{ title[:-1]}} <a href="/random">here</a></p>
+
+</form>
+</body>
+</html>
