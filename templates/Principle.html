@@ -15,11 +15,12 @@
     Previous |
     {% endif %}
     <a href="/random">Random</a>
-    {% if num < 13 %}
+    {% if num < total - 1 %}
     | <a href="{{ num + 1 }}">Next</a>
     {% else %}
     | Next
     {% endif %}
+    ( {{ num + 1 }} of {{ total }} )
 </p>
 
 <p>Here you can access the <a href="/principles">{{ title }}</a></p>

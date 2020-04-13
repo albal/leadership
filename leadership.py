@@ -62,7 +62,7 @@ def principle(param):
     if param >= 0:
         if param < len(principles):
             return render_template("Principle.html", title=app_title, principle=list(principles.keys())[param],
-                                   description=list(principles.values())[param], num=param)
+                                   description=list(principles.values())[param], num=param, total=len(principles))
     return out_of_range_message()
 
 
